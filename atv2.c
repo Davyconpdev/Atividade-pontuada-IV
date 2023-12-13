@@ -4,7 +4,7 @@
 #include <locale.h>
 
 #define tam 200
-#define n 2
+#define n 5
 #define c 2
 
 struct dados_aluno
@@ -47,7 +47,7 @@ int main()
 
     for (i = 0; i < n; i++)
     {
-        printf("\nSolicitando dados do %dº aluno.\n", i + 1);
+        printf("\nSolicitando dados do %dÂº aluno.\n", i + 1);
         printf("Nome: ");
         gets(aluno[i].nome);
         fflush(stdin);
@@ -57,7 +57,7 @@ int main()
 
         for (y = 0; y < c; y++)
         {
-            printf("%dº Nota: ", y + 1);
+            printf("%dÂº Nota: ", y + 1);
             scanf("%f", &aluno[i].nota[y]);
             fflush(stdin);
         }
@@ -68,17 +68,17 @@ int main()
 
     for (i = 0; i < n; i++)
     {
-        printf("\nDados do %dº aluno.\n", i + 1);
+        printf("\nDados do %dÂº aluno.\n", i + 1);
         printf("Nome: %s\n", aluno[i].nome);
         printf("Data de nascimento: %s\n", aluno[i].nascimento);
 
         for (y = 0; y < c; y++)
         {
-            printf("%dº Nota: %.1f\n", y + 1, aluno[i].nota[y]);
+            printf("%dÂº Nota: %.1f\n", y + 1, aluno[i].nota[y]);
         }
-        printf("Média: %.1f\n", aluno[i].media);
+        printf("MÃ©dia: %.1f\n", aluno[i].media);
 
-        printf("Situação do aluno: %s\n", verifiquemedia(aluno[i].media));
+        printf("SituaÃ§Ã£o do aluno: %s\n", verifiquemedia(aluno[i].media));
         printf("\n=========================================\n");
     }
 
